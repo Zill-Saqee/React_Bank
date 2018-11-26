@@ -1,32 +1,41 @@
-.App {
-  text-align: center;
-}
+body  { background-color: #ccc; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+  a { text-decoration: none; }    
+  .header { background-color: steelblue;line-height: 3.4em;color: white; }
+        .header p  {  padding-left:15%; font-size: xx-large ;display: inline;}
+        .header ul { list-style-type:none; display: inline;padding-left: 25% }
+        .header ul li{ display: inline;padding-left: 2%; }
+        .header ul li a { text-decoration: none;color: white;  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  .dashboard { width: 65%;margin-left: auto;margin-right: auto; display: flex;margin-top: 2%; }
+        .dleft { min-height: 220px;width:45%;float: left;background-color: white;margin-right: 2%;border-radius: 5px;  }
+        .top { min-height: 20% ;position: relative; } hr{ width: 95%;}
+        .top span { font-size: x-large;padding-bottom: 80%;  }
+        .dlinks { display: inline; float: right;position: absolute;right: 0;top:0;padding-right: 2%;padding-top: 1%;}
+        .dlinks a{padding: 3px;border-radius: 2px; text-decoration: none;margin-left: 1%;font-size: .8em;background-color: slategray;color: white; }
+       .bottom { padding-top: 40px;  }
+       .bottom a{ text-decoration: none;font-size: 1.4em;color: #665; }
+        .dright { min-height: 220px;width:45%;float: right;background-color: white;margin-left: 2%;border-radius: 6px;   }
+        .dicon { height: 30px;margin: 2% 1% 0 2%; }
 
-.App-link {
-  color: #61dafb;
-}
+  .create { background-color: white;width: 65%;margin: auto;min-height: 450px;border-radius: 5px;position: relative; }
+        .create h1{ background-color: slategray;text-align: center;padding: 2%;border-top-right-radius: 5px;border-top-left-radius: 5px;font-weight: lighter;color: white; }
+        .create span { padding: 2%;float: left;width: 20%;font-size: .9em  }
+        .create input,.create a{ float: left;width: 70%;margin: 2%;font-size: 1em; border: none;border-bottom: 1px dashed slategray;outline: none;}
+        .create input[type='submit'],.create a{ width: 20%;border: none;font-size: .8em;padding: 10px;background-color: slategray;color: white;font-size: 0.8em;border-radius: 10px;}
+        .create input[type='submit']:hover { cursor: pointer;  }
+        .create a { text-decoration: none;text-align: center;    }
+        .create select { margin: 2%;font-size: .8em;width: 20%;padding: 1%; border-width: thin;border-radius: 5px; outline: none;}
+        hr{ width: 100%;border-top: 1px solid #ccc; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  .accounts,.transactions {  width: 65%;min-height: 300px;background-color: white;margin: auto;margin-top: 2%;border-radius: 5px;position: relative;    }
+        .goback,.gobackfromt { padding: 3px; position: absolute;top: 0;left: 0;margin-top: 10px;margin-left: 10px;color: white;border-radius: 2px; text-decoration: none;background-color: slategrey;font-size: .8em;} 
+        .addnew { padding: 4px;position: absolute;top: 0;right: 0;margin-right: 10px;margin-top: 10px;color: white;border-radius: 2px;text-decoration: none;background-color: slategrey;font-size: .8em; }
+        .accounts span,.transactions span { font-size: larger; } 
+        .innerdivA,.innerdivT {   width: 100%;text-align: center;min-height: 50px; border-bottom: 1px solid #ccc; }
+        .innerdivA img ,.innerdivT img { padding-top: 70px;height: 20px;margin-right: 10px;  } .innerdiv span {  font-size: 1.8em;  }
+        table   { width: 100%;overflow: auto;margin-top: 0px}
+        .accTable {   } .accTable tr th{ font-family: 'Courier New', Courier, monospace;background-color: slategray;height: 40px;color: white; }
+        table tr {   width: inherit; text-align: left;border:1px dashed #ccc   } .accTable tr th, .accTable tr td{ text-align: center;width: 20%;border:1px solid #ccc;font-size: .9em;  }
+         
+  .footer { text-align: center;margin-top: 10px;font-size: .8em; }

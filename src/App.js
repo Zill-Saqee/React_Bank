@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter,Route} from 'react-router-dom';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import Accounts from './components/Accounts';
+import Transactions from './components/Transactions';
+import Create from './components/Create';
+ import Detail from './components/Detail';
+ import Tdetail from './components/Tdetail';
+ import Withdraw from './components/withdraw';
+ import Deposit from './components/deposit';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+          <div className="App">
+              <Header />
+              <Route exact path='/' component={Dashboard} />
+              <Route exact path='/accounts' component={Accounts} />
+              <Route exact path='/accounts/detail' component={Detail} />
+              <Route exact path='/transactions/detail' component={Tdetail} />
+              <Route exact path='/accounts/withdraw' component={Withdraw} />
+              <Route exact path='/accounts/deposit' component={Deposit} />
+              <Route exact path='/accounts/create' component={Create} />
+              <Route exact path='/transactions' component={Transactions} />
+              <Footer />
+          </div>
+      </BrowserRouter>
     );
   }
 }

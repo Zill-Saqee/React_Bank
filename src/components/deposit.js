@@ -83,7 +83,7 @@ class Deposit extends Component {
                         }
                    else
                         {
-                            alert("Please enter in amount field");
+                            alert("You deposited no amount");
                         }
                 }
 

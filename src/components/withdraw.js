@@ -67,7 +67,8 @@ withdraw()
 
                 let d=localStorage.getItem("detail");
                 let detail=JSON.parse(d);
-                if(detail[0].amount<withdrawn)
+                let nn=detail[0].amount;
+                if(Number(nn)<withdrawn)
                     {
                         alert("You have insufficient balance to withdraw");
                     }

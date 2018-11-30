@@ -34,7 +34,7 @@ class Transactions extends Component {
         }
  
   render() {
-    const h=<p style={{textAlign:"center",fontFamily:"sans-serif",color:"#ccc"}}>No transactions have been made yet</p>;
+    const h=<h2 style={{textAlign:"center",fontFamily:"sans-serif",color:"#ccc" }}>No transactions have been made yet</h2>;
     // const d=<tr key={index}><td><Link to={"/accounts/detail"} onClick={()=> this.sendID(item.id,index) }>{item.id}</Link></td><td>{item.time}</td><td>{item.acc}</td><td>{item.type}</td><td>{item.amount}</td></tr>
     return (
       <div className="transactions">
@@ -46,7 +46,7 @@ class Transactions extends Component {
             <table className="accTable" cellSpacing="0px">
                 { this.state.heading===false  ? h : <thead><tr><th>TransactionId</th><th>Time</th><th>Account#</th><th>Account Type</th><th>Amount</th></tr></thead>   }
                 <tbody>
-                {this.state.heading=== true ? "" : this.state.array.map(  (item,index)=>{  return (<tr key={index}><td><Link to={"/transactions/detail"} onClick={()=> this.sendID(item.id,index) }>{item.id}</Link></td><td>{item.time}</td><td>{item.acc}</td><td>{item.type}</td><td>{item.amount}</td></tr>)   })} 
+                {this.state.heading=== false ? "" : this.state.array.map(  (item,index)=>{  return (<tr key={index}><td><Link to={"/transactions/detail"} onClick={()=> this.sendID(item.id,index) }>{item.id}</Link></td><td>{item.time}</td><td>{item.acc}</td><td>{item.type}</td><td>{item.amount}</td></tr>)   })} 
                 </tbody>
             </table>
       </div>
